@@ -1,0 +1,18 @@
+##Install Miniconda 
+https://docs.conda.io/en/latest/miniconda.html
+
+##Install Anaconda
+https://docs.anaconda.com/anaconda/install/silent-mode/
+https://katiekodes.com/setup-python-windows-miniconda/
+
+
+###Manage conda virtual
+
+##clone a virtual
+# setup path
+export PATH=/apps/anaconda/4.3.1/3/bin:$PATH
+
+#create a clone via path
+conda create --prefix /mypath/venvpath1 --clone 
+
+
