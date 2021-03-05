@@ -18,11 +18,13 @@ conda config --show
 
 #conda config change
 conda config --add channels conda-forge
-conda config --append envs_dirs /myconda/venvpath1
+conda config --append envs_dirs /myconda/venv1path
 
 #create a clone via path, old environment
-conda create --prefix /myconda/venvpath1 --clone /apps/anaonda/4.3.1/3
-conda create --prefix /myconda/venvpath2 -f oldenv.yml
+conda create --prefix /myconda/venv1path --clone /apps/anaonda/4.3.1/3
+conda create --prefix /myconda/venv2path -f oldenv.yml
+conda create -n mycondavenv3 --clone base
+conda create -n mycondavenv4 python=3.6
 
 #conda update
 conda update anaconda --all
@@ -33,6 +35,13 @@ conda install -c https://url1 -c https://url2 --override-channels beautifulsoup=
 #conda active via env name or path
 conda activate ${env_name}
 source activate /myconda/venvpath1
+
+#conda export env/pkg 
+#export pkg info
+conda list --export >oldpkglist.txt
+#export env info
+conda env export /myconda/venv1path >oldenv.yml
+
 
 
 
