@@ -70,6 +70,11 @@ join # combine rows of text, by initial column value
 <br/><br/><br/>
 
 
+### Bash two or three liners
+'''shell
+while read line;
+do echo $line; conda update -y $line --all >/tmp/updatelog.txt ;
+done <updatepkglist.txt
 
 
 
