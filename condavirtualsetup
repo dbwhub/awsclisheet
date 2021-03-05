@@ -31,6 +31,7 @@ conda update anaconda --all
 
 #conda pkg install
 conda install -c https://url1 -c https://url2 --override-channels beautifulsoup=4.6.0
+conda install -c https://url1/pkgname.whl
 
 #conda active via env name or path
 conda activate ${env_name}
