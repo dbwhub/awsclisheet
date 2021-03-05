@@ -12,7 +12,22 @@ https://katiekodes.com/setup-python-windows-miniconda/
 # setup path
 export PATH=/apps/anaconda/4.3.1/3/bin:$PATH
 
-#create a clone via path
-conda create --prefix /mypath/venvpath1 --clone 
+#check conda env
+conda info -e
+conda config --show
+
+#conda config change
+conda config --add channels conda-forge
+
+#create a clone via path, old environment
+conda create --prefix /mypath/venvpath1 --clone /apps/anaonda/4.3.1/3
+conda create --prefix /mypath/venvpath2 -f oldenv.yml
+
+#conda update
+conda update anaconda --all
+
+#conda pkg install
+conda install -c https://url1 -c https://url2 --override-channels beautifulsoup=4.6.0
+
 
 
